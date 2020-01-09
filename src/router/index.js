@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import test1 from '@/components/test1'
-
+const HelloWorld = () => import('@/components/HelloWorld')
+const test1 = () => import('@/components/test1')
 Vue.use(Router)
 
 var router =  new Router({
