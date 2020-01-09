@@ -1,0 +1,174 @@
+// 一些变量
+$primary: #3398ff;
+$success: #29cc7a;
+$danger: #ee6869;
+body{
+    margin: 0;padding: 0;
+}
+// 一些混合
+@mixin primary {
+    color: $primary;
+}
+@mixin success {
+    color: $success;
+}
+@mixin danger {
+    color: $danger;
+}
+
+// 一些循环
+@for $i from 12 through 30 {
+    .f#{$i} {
+        font-size: 1px * $i !important;
+    }
+}
+* {
+    // text-align: justify;
+    padding: 0;
+    margin: 0;
+    font-family: "Microsoft YaHei";
+    box-sizing: border-box;
+    box-sizing: -webkit-border-box;
+    font-size: 0.24rem
+}
+
+a {
+    text-decoration: none;
+    color: #272727;
+}
+
+a,
+button,
+input {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+li {
+    list-style: none;
+}
+
+button,
+input[type='radio'],
+input[type='checkbox'],
+input[type='button'] {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+img {
+    max-width: 100%;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+p {
+    margin: 0
+}
+
+input::-webkit-input-placeholder {
+    color: #929292;
+}
+
+textarea::-webkit-textarea-placeholder {
+    color: #cccccc;
+}
+
+body {
+    width: 100%;
+    height: 100%
+}
+
+html {
+    width: 100%;
+    height: 100%
+}
+
+/*提示*/
+.ts_c {
+    width: 100%;
+    min-height: 0.5rem;
+    position: fixed;
+    bottom: 4rem;
+    left: 0;
+    z-index: 9999;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+
+    i {
+        padding: 0.2rem 0.4rem;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 0.3rem;
+    }
+
+}
+
+.s-flex-start {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.s-flex-between {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.s-flex-around {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.s-flex-evenly {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.s-flex-end {
+
+    display: -webkit-flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.s-flex-center {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/*多行文本隐藏*/
+@mixin mul_ellipsis($num) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $num;
+    overflow: hidden;
+}
